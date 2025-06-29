@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  java-cp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: java-cp
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    environment:
+      - TZ=Asia/Tokyo
